@@ -1,0 +1,19 @@
+
+[config]
+title : Test Document
+stylesheet : css/style.css
+directory : example/
+user : inner
+
+[menu]
+インデックス : index.md
+・インストール : install.md
+・クイクスタート : quickstart.md
+・使い方 : documents.md
+
+[header]
+title : Test Document
+comments : コメント
+
+[footer]
+text : @copyright 2015 inner

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css">
+<title>Test Document</title>
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+<h1>Test Document</h1><p>コメント</p>
+</div>  <!-- header -->
+<div id="sidebar">
+<h3>Menu</h3><p><a href="index.html">インデックス</a></p><p><a href="install.html">・インストール</a></p><p><a href="quickstart.html">・クイクスタート</a></p><p><a href="documents.html">・使い方</a></p>
+</div>  <!-- sidebar -->
+<div id="contents">
+<h1>documents</h1>
+
+<h2>Title</h2>
+
+<h3>List</h3>
+
+<ul>
+<li>list 1</li>
+<li>list 2
+<ul>
+<li>list 3</li>
+<li>list 4
+<ul>
+<li>list 5</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1>code</h1>
+
+<p>test comment
+<pre>
+sample code
+f = open('workfile', 'rb+')
+f.write(b'0123456789abcdef')
+16
+f.seek(5)     # Go to the 6th byte in the file
+5
+f.read(1)
+b'5'
+f.seek(-3, 2) # Go to the 3rd byte before the end
+13
+f.read(1)
+b'd'
+</pre></p>
+
+<hr />
+
+<p>test
+<pre>
+$ ls -l
+</pre></p>
+
+<h3>link Test</h3>
+
+<p><a href="https://www.google.com">test link</a></p>
+
+<h3>image file</h3>
+
+<p><img src="test.png" alt="test image file" /></p>
+
+</div>  <!-- contents -->
+<div id="footer">
+@copyright 2015 inner
+</div>  <!-- footer -->
+</div>  <!-- wrapper -->
+</body>
+</html>
+
