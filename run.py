@@ -1,6 +1,6 @@
 # Markdown Documentation Builder
 # Module
-import markdown2
+import markdown
 import configparser
 
 # template
@@ -83,17 +83,25 @@ def convert_markdown2(md_file, html_file, html):
     print(html_file)
     print(md_file)
 
-    contents = markdown2.markdown_path(md_file, extras="output2")
-    # <tag>の置換
-    contents = contents.replace('<code>', '<pre>')
-    contents = contents.replace('</code>', '</pre>')
+    md = markdown.Markdown()
+    fr = open(md_file, 'r')
+    contents_text = fr.read()
+    fr.close()
+    contents = ''
+
+    contents_list = contents_text.split('```')
+    for i in range(len(contents_list)):
+        if i % 2 == 0:
+            contents = contents + md.convert(contents_list[i])
+        else:
+            contents = contents + '<pre><code><xmp>' + contents_list[i] + '</xmp></code></pre>'
 
     html = html.replace('{{ contents }}', contents)
 
     # create html file
-    f = open(html_file, 'w')
-    f.write(html)
-    f.close()
+    fw = open(html_file, 'w')
+    fw.write(html)
+    fw.close()
 
 
 # Main
