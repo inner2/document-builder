@@ -41,7 +41,7 @@ def build_documents():
 
     # read config file
     config = configparser.ConfigParser()
-    config.read('setting2.txt')
+    config.read('config.txt')
     builder_config['title'] = config['config']['title']
     builder_config['stylesheet'] = config['config']['stylesheet']
 
@@ -84,7 +84,7 @@ def convert_markdown2(md_file, html_file, html):
     print(md_file)
 
     md = markdown.Markdown()
-    fr = open(md_file, 'r')
+    fr = open(md_file, 'r', encoding='utf-8')
     contents_text = fr.read()
     fr.close()
     contents = ''
@@ -103,7 +103,7 @@ def convert_markdown2(md_file, html_file, html):
     html = html.replace('{{ contents }}', contents)
 
     # create html file
-    fw = open(html_file, 'w')
+    fw = open(html_file, 'w', encoding='utf-8')
     fw.write(html)
     fw.close()
 

@@ -1,18 +1,18 @@
 [config]
-stylesheet = css/style.css
-directory = example/
-title = Test title
 user = inner
+directory = example/
+stylesheet = css/style.css
+title = Test title
 
 [menu]
 markdown = markdown.md
-使い方 = documents.md
 ホーム = index.md
+使い方 = documents.md
 準備 = install.md
 
 [header]
-title = Document-builder
 comments = ここの内容は適当です。
+title = Document-builder
 
 [footer]
 text = @copyright 2015 inner
