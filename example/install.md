@@ -21,7 +21,7 @@ $ brew install python3
 pip を使うと簡単です。
 
 ```
-$ pip install markdown2
+$ pip install markdown
 ```
 
 ## プログラムファイルの入手

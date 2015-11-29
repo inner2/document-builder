@@ -94,8 +94,12 @@ def convert_markdown2(md_file, html_file, html):
         if i % 2 == 0:
             contents = contents + md.convert(contents_list[i])
         else:
-            contents = contents + '<pre><code><xmp>' + contents_list[i] + '</xmp></code></pre>'
+            contents_list[i] = contents_list[i].replace('<', '&lt;')
+            contents = contents + '<pre><code>' + contents_list[i] + '</code></pre>'
 
+    kai = '''<pre><code>
+'''
+    contents = contents.replace(kai, '<pre><code>')
     html = html.replace('{{ contents }}', contents)
 
     # create html file
