@@ -4,7 +4,7 @@ import markdown2
 import configparser
 
 # template
-html_temp = '''<!DOCTYPE HTML>
+html_temp = '''
 <html>
 <head>
 <meta charset="utf-8">
@@ -17,6 +17,7 @@ html_temp = '''<!DOCTYPE HTML>
 {{ header }}
 </div>  <!-- header -->
 <div id="sidebar">
+<h3>Menu</h3>
 {{ sidebar }}
 </div>  <!-- sidebar -->
 <div id="contents">
@@ -28,7 +29,6 @@ html_temp = '''<!DOCTYPE HTML>
 </div>  <!-- wrapper -->
 </body>
 </html>
-
 '''
 link_temp = '''<p><a href="{{ link }}">{{ label }}</a></p>'''
 
@@ -36,8 +36,8 @@ link_temp = '''<p><a href="{{ link }}">{{ label }}</a></p>'''
 # build documents
 def build_documents():
     # 変数
-    sidebar_menu = '<h3>Menu</h3>'
-    builder_config = {'title': 'title', 'stylesheet': 'css/style.css', 'directory': 'example/'}
+    sidebar_menu = ''
+    builder_config = {'title': 'title', 'stylesheet': 'style.css', 'directory': 'example/'}
 
     # read config file
     config = configparser.ConfigParser()
@@ -79,7 +79,7 @@ def build_documents():
 
 # convert to html file
 def convert_markdown2(md_file, html_file, html):
-    print('convert to html from markdown2=')
+    print('convert to html')
     print(html_file)
     print(md_file)
 
