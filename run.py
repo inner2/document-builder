@@ -41,7 +41,7 @@ def build_documents():
 
     # read config file
     config = configparser.ConfigParser()
-    config.read('config.txt')
+    config.read('setting2.txt')
     builder_config['title'] = config['config']['title']
     builder_config['stylesheet'] = config['config']['stylesheet']
 
