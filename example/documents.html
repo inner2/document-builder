@@ -8,63 +8,46 @@
 <body>
 <div id="wrapper">
 <div id="header">
-<h1>Document-builder</h1><p>Markdown のドキュメントビルダーです。（ここの内容は適当ところがおおいです）</p>
+<h1>Document-builder</h1><p>Markdown のドキュメントビルダーです。（ここの内容は適当ところが多いです）</p>
 </div>  <!-- header -->
 <div id="sidebar">
 <h3>Menu</h3>
-<p><a href="index.html">インデックス</a></p><p><a href="install.html">・インストール</a></p><p><a href="quickstart.html">・クイクスタート</a></p><p><a href="documents.html">・使い方</a></p>
+<p><a href="index.html">ホーム</a></p><p><a href="install.html">準備</a></p><p><a href="documents.html">使い方</a></p><p><a href="markdown.html">markdown</a></p>
 </div>  <!-- sidebar -->
 <div id="contents">
-<h1>documents</h1>
+<h1>使い方</h1>
 
-<h2>Title</h2>
+<h2>Setting</h2>
 
-<h3>List</h3>
+<p>config.txt</p>
 
-<ul>
-<li>list 1</li>
-<li>list 2
-<ul>
-<li>list 3</li>
-<li>list 4
-<ul>
-<li>list 5</li>
-</ul></li>
-</ul></li>
-</ul>
+<p>```
+[config]
+title : Test Document
+stylesheet : css/style.css
+directory : example/
+user : inner</p>
 
-<h1>code</h1>
+<p>[menu]
+インデックス : index.md
+・準備 : install.md
+・使い方 : documents.md
+・Markdon : markdown.md</p>
 
-<p>test comment
-<pre>
-sample code
-f = open('workfile', 'rb+')
-f.write(b'0123456789abcdef')
-16
-f.seek(5)     # Go to the 6th byte in the file
-5
-f.read(1)
-b'5'
-f.seek(-3, 2) # Go to the 3rd byte before the end
-13
-f.read(1)
-b'd'
+<p>[header]
+title : Document-builder
+comments : Markdown のドキュメントビルダーです。（ここの内容はテストしているだけなので適当です）</p>
+
+<p>[footer]
+text : @copyright 2015 inner
+```</p>
+
+<h2>Document の作成</h2>
+
+<p><pre>
+$ cd document-builder
+$ python3 run.py
 </pre></p>
-
-<hr />
-
-<p>test
-<pre>
-$ ls -l
-</pre></p>
-
-<h3>link Test</h3>
-
-<p><a href="https://www.google.com">test link</a></p>
-
-<h3>image file</h3>
-
-<p><img src="test.png" alt="test image file" /></p>
 
 </div>  <!-- contents -->
 <div id="footer">

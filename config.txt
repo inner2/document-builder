@@ -6,10 +6,10 @@ directory : example/
 user : inner
 
 [menu]
-インデックス : index.md
-・準備 : install.md
-・クイクスタート : quickstart.md
-・使い方 : documents.md
+ホーム : index.md
+準備 : install.md
+使い方 : documents.md
+Markdown : markdown.md
 
 [header]
 title : Document-builder
