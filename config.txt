@@ -7,13 +7,13 @@ user : inner
 
 [menu]
 インデックス : index.md
-・インストール : install.md
+・準備 : install.md
 ・クイクスタート : quickstart.md
 ・使い方 : documents.md
 
 [header]
-title : Test Document
-comments : コメント
+title : Document-builder
+comments : Markdown のドキュメントビルダーです。（ここの内容は適当ところが多いです）
 
 [footer]
 text : @copyright 2015 inner
